@@ -9,6 +9,11 @@ int main(){
     float pib1, pib2;
     int pontosturisticos1, pontosturisticos2;
 
+    #pragma Impementado no segundo nível do jogo (nível aventureiro) 
+    float densidadePop1, densidadePop2;
+    float pibPerCapita1, pibPerCapita2;
+    #pragma endregion
+
     printf("CADASTRO DE CARTAS - SUPER TRUNFO\n\n");
     
     printf("Cadastre suas cartas!\n\n");
@@ -61,13 +66,30 @@ int main(){
     printf("Informe a quantidade de pontos turístico existentes na cidade: (número inteiro)> \n");
     scanf(" %d", &pontosturisticos2);
 
+    #pragma Impementado no segundo nível do jogo (nível aventureiro)
+    // Carta 1
+    densidadePop1 = (float)(populacao1 / area1);
+    pibPerCapita1 = (float)(pib1 / populacao1) * 1000000000.00; // Foi necessário multiplicar por bilhão
+    // Carta 2
+    densidadePop2 = (float)(populacao2 / area2);
+    pibPerCapita2 = (float)(pib2 / populacao2) * 1000000000.00; // Foi necessário multiplicar por bilhão
+    #pragma endregion
+
     // Exibição das cartas
     printf("Parabéns! Cartas cadastradas com sucesso!\n\n");
     // Exibição da carta 1
-    printf("# Carta 1:\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nQuantidade de pontos turísticos: %d\n\n", estado1, codigo1, cidade1, populacao1, area1, pib1, pontosturisticos1);
+    printf("# Carta 1:\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f Bilhões de reais\nQuantidade de pontos turísticos: %d\n", estado1, codigo1, cidade1, populacao1, area1, pib1, pontosturisticos1);
+
+    #pragma Impementado no segundo nível do jogo (nível aventureiro) 
+    printf("Densidade Populacional: %.2f hab/km³\nPIB Per Capita: %.2f Reais\n\n", densidadePop1, pibPerCapita1);
+    #pragma endregion
 
     // Exibição da carta 2
-    printf("# Carta 2:\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nQuantidade de pontos turísticos: %d\n\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2);
+    printf("# Carta 2:\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %.2f km²\nPIB: %.2f Bilhões de reais\nQuantidade de pontos turísticos: %d\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2);
+
+    #pragma Impementado no segundo nível do jogo (nível aventureiro) 
+    printf("Densidade Populacional: %.2f hab/km²\nPIB Per Capita: %.2f Reais\n\n", densidadePop2, pibPerCapita2);
+    #pragma endregion
 
     return 0;
 }
