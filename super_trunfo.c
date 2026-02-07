@@ -69,5 +69,5 @@ int main(){
     // Exibição da carta 2
     printf("# Carta 2:\nEstado: %c\nCódigo: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea: %f\nPIB: %f\nQuantidade de pontos turísticos: %d\n\n", estado2, codigo2, cidade2, populacao2, area2, pib2, pontosturisticos2);
 
-    return 0
+    return 0;
 }
